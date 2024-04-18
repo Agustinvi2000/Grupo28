@@ -1,22 +1,32 @@
-.formTitle {
-    width: fit-content;
-    margin: auto;
-    text-decoration: underline;
+.headerTitle {
+    text-align: center;
 }
 
-main {
+.navUl {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.newsletterSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletterTitle {
+    text-align: center;
 }
 
 .formulario {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 40rem;
+    width: 50rem;
     border: solid 0.1rem black;
+    margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
+
 }
 
 label {
