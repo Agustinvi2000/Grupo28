@@ -1,12 +1,3 @@
-.headerTitle {
-    text-align: center;
-}
-
-.navUl {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
 
 .newsletterSection {
     display: flex;

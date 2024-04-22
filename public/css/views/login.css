@@ -1,0 +1,42 @@
+
+.loginForm_body {
+    background: linear-gradient(to bottom, rgb(209, 159, 192), rgb(104, 225, 104));
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.loginMain {
+    display: flex;
+    justify-content: center;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    margin-top: 10rem;
+}
+
+.loginForm_label {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: rgb(117, 19, 208);
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.loginForm_input {
+    margin-bottom: 0.5rem;
+    background-color: rgb(209, 159, 192);
+    color: white;
+    font-weight: bolder;
+}
+
+.loginButton {
+    margin-top: 1.5rem;
+    height: 1.5rem;
+    background-color: rgb(104, 225, 104);
+    color: white;
+    font-weight: bolder; 
+}
