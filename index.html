@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/css/normalize.css">
     <link rel="stylesheet" href="/public/css/components/header.css">
+    <link rel="stylesheet" href="/public/css/components/footer.css">
     <link rel="stylesheet" href="/public/css/views/index.css">
     <title>PublicObras</title>
 </head>
@@ -27,6 +28,9 @@
 
     <section class="newsletterSection">        
         <h3 class="newsletterTitle">Quieres recibir información sobre las útimas novedades de PublicObras? Suscribite al NewsLetter!</h3>
+
+<!-- Este formulario lo pondria como formulario de contacto no para el Newsletter, que opinan? -->
+
         <form class="formulario">
             <label for="nombre">Nombre</label>
             <input type="text" placeholder="Escribe tu nombre..">
@@ -49,7 +53,19 @@
     </section> 
 
     <footer>
-
+        <label>Recibe las últimas novedades de PublicObras:
+            <input type="email" name="email" placeholder="email@email.com">
+            <button type="button">Suscribirme al Newsletter</button>
+        </label>
+        <div class="social">
+            <p>Seguinos en nuestras redes</p>
+            <a href="www.instagram.com"><i class="bi bi-instagram"></i></a>
+            <a href="www.facebook.com"><i class="bi bi-facebook"></i></a>
+            <a href="www.pinterest.com"><i class="bi bi-pinterest"></i></a>
+        </div>
+        <hr>
+        <a href="/public/views/terms.html">Terminos y Condiciones</a>
+        <p>©2024 PublicObras</p>
     </footer>
 
 </body>
