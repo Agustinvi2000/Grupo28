@@ -35,3 +35,30 @@ textarea {
 button {
     margin-bottom: 1.5rem;
 }
+
+h1,h2{
+    text-align: center;
+    text-shadow: blue;
+
+    
+}
+
+
+div{
+    text-align: center;
+    
+}
+
+p{
+    text-align: center;
+    font-size: 5000;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+}
+
+
+
+body{
+    background: url("../TP/obras/fondo.jpeg");
+    background-size:cover;
+}
