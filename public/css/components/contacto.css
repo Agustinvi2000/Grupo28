@@ -1,0 +1,199 @@
+body{
+    width: 70vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "header header header header"
+    "main0 main0 main0 main0"
+    "main1 main1 main2 main2"
+    "main3 main4 main5 main6" 
+    "main7 main7 main8 main8"
+    "main9 main9 main9 main9"
+    "main10 main10 main10 main10"
+    "footer footer footer footer";
+    header {
+        grid-area: header;
+        nav {
+            display: flex;
+            justify-content: center;
+
+            .header_title_nav_li {
+                display: none;
+            }
+        }
+        .menu {
+            display: none;
+        }
+        .header_title {
+            display: block;
+        }
+    }    
+    main {
+        display: contents;
+        .main_title {
+            grid-area: main0;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .formulario {
+            display: contents;
+            .main1{
+                grid-area: main1;
+                justify-self: center;
+            }
+            .main2{
+                grid-area: main2;
+                justify-self: center;
+            }
+            .main3{
+                grid-area: main3;
+                justify-self: right;
+            }
+            .main4{
+                grid-area: main4;
+                justify-self: center;
+            }
+            .main5{
+                grid-area: main5;
+                justify-self: center;
+            }
+            .main6{
+                grid-area: main6;
+                justify-self: center;
+            }
+            .main7{
+                grid-area: main7;
+                justify-self: center;
+            }
+            .main8{
+                grid-area: main8;
+                justify-self: center;
+            }
+            .main9{
+                grid-area: main9;
+                display: flex;
+                justify-self: center;
+                width: 80%; /* Ajusta el ancho del textarea al 80% del contenedor */
+            }
+            .main10{
+                grid-area: main10;
+                justify-self: center;
+            }
+        } 
+        label {
+            margin-bottom: 0.5rem;
+        }
+        input {
+            margin-bottom: 0.5rem;
+            margin-left: 0.5rem;
+        }
+        textarea {
+            margin-bottom: 1.5rem;
+            margin-left: 0.5rem;
+            width: 100%;
+            height: 150px; /* Ajusta la altura del textarea a 150px */
+        }
+    }
+    footer {
+        grid-area: footer;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px){
+    body{
+        grid-template-areas: 
+        "header header header header"
+        "main0 main0 main0 main0"
+        "main1 main1 main2 main2"
+        "main3 main4 main5 main6" 
+        "main7 main7 main7 main7" 
+        "main8 main8 main8 main8"
+        "main9 main9 main9 main9"
+        "main10 main10 main10 main10"
+        "footer footer footer footer";
+    }
+}
+
+@media screen and (max-width: 320px){
+    body{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "header header header"
+        "main0 main0 main0"
+        "main1 main1 main1"
+        "main2 main2 main2"
+        "main3 main3 main3"
+        "main4 main5 main6" 
+        "main7 main7 main7" 
+        "main8 main8 main8"
+        "main9 main9 main9"
+        "main10 main10 main10"
+        "footer footer footer";
+        header {
+            border-bottom: 0;
+            margin-bottom: 0;
+            .menu {
+                display: flex;
+                position: absolute;
+                top: 10px;
+                left:0;
+                padding-left: 10px;
+            }
+            .header_title {
+                display: none;
+            }
+            nav{
+                .header_nav{
+                    flex-direction: column;
+                }
+                .ocultar {
+                    display: none;
+                    }
+                .header_title_nav_li{
+                    display: flex;
+                    padding: 1rem;
+                    font-size: large;
+                    font-weight: bold;
+                }
+                ul {
+                    position:absolute;
+                    top: 38px;
+                    left:0;
+                    background:#eee;
+                    padding:0;
+                    li {
+                        float:none;
+                        width:210px
+                    }
+                }
+            }
+        }
+        main {
+            .main_title {
+                padding-top: 16px;
+            }
+            .formulario {
+                .main1, .main2, .main7, .main8,.main9 {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    input, textarea {
+                        margin-left: 0;
+                        margin-top: 0.5rem;
+                    }           
+                }
+                .main3{
+                    justify-self: center;
+                }
+                .main4, .main5, .main6 {
+                    input {
+                        margin-left: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

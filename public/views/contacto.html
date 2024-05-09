@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/normalize.css">
+    <link rel="stylesheet" href="/public/css/components/header.css">
+    <link rel="stylesheet" href="/public/css/components/footer.css">
+    <link rel="stylesheet" href="/public/css/components/contacto.css">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
+    <title>PublicObras</title>
+</head>
+<body>
+
+    <header>
+        
+        <label class="menu"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></label>
+        <h1 class="header_title" ><a href="/">P U B L I C O B R A S</a></h1>
+        <nav>
+            <ul class="header_nav ocultar">
+                <li class="header_title_nav_li"><a href="/">P U B L I C O B R A S</a></li>
+                <li class="header_nav_li"><a href="/public/views/acerca.html">Acerca de PublicObras</a></li>
+                <li class="header_nav_li"><a href="/public/views/Proyecto_1.html">Crear Cuenta</a></li>
+                <li class="header_nav_li"><a href="/public/views/galeria.html">Galeria</a></li>
+                <li class="header_nav_li"><a href="/public/views/login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>        
+        <h1 class="main_title">Formulario de contacto</h1>
+
+        <form class="formulario">
+            <label class="main1">Nombre<input type="text" name="nombre" placeholder="Escribe tu nombre.."></label>
+            <label class="main2">Apellido<input type="text" name="apellido" placeholder="Escribe tu apellido.."></label>
+            <label class="main3">Género</label>
+            <label class="main4">Varón<input type="radio" name="genero" value="hombre"></label>
+            <label class="main5">Mujer<input type="radio" name="genero" value="mujer"></label>
+            <label class="main6">Otro<input type="radio" name="genero" value="otro"></label>
+            <label class="main7">Fecha de nacimiento<input type="date" name="date"></label>
+            <label class="main8">Correo electrónico<input type="email" name="email"></label>
+            <label class="main9">Comentarios<textarea name="textarea" placeholder="Escribí tu consulta..."></textarea></label>
+            <button type="submit" class="main10">Enviar</button>
+        </form>
+    </main> 
+
+    <footer>
+        <label>Recibe las últimas novedades de PublicObras:
+            <input type="email" name="email" placeholder="email@email.com">
+            <button type="button">Suscribirme al Newsletter</button>
+        </label>
+        <div class="social">
+            <p>Seguinos en nuestras redes</p>
+            <a href="www.instagram.com"><i class="bi bi-instagram"></i></a>
+            <a href="www.facebook.com"><i class="bi bi-facebook"></i></a>
+            <a href="www.pinterest.com"><i class="bi bi-pinterest"></i></a>
+        </div>
+        <hr>
+        <a href="/public/views/terms.html">Terminos y Condiciones</a>
+        <p>©2024 PublicObras</p>
+    </footer>
+
+    <script src="../js/contacto.js"></script>
+</body>
+</html>
