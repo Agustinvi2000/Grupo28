@@ -1,0 +1,85 @@
+
+.newsletterSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletterTitle {
+    text-align: center;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50rem;
+    border: solid 0.1rem black;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+}
+
+label {
+    margin-bottom: 0.5rem;
+}
+
+input {
+    margin-bottom: 0.5rem;
+}
+
+textarea {
+    margin-bottom: 1.5rem;
+}
+
+button {
+    margin-bottom: 1.5rem;
+}
+
+h1,h2,h4{
+    text-align: center;
+    text-shadow: blue;
+
+    
+}
+
+
+div{
+    text-align: center;
+    
+}
+
+p{
+    text-align: center;
+    font-size: 5000;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+}
+
+
+
+body{
+    background: url(".../public/img/Van_Gogh.-Campo-de-trigo-con-cuervos.-1890.webp");
+    background-size:cover;
+    
+}
+
+.header_title {
+    animation: slideInFromLeft 1s ease-out;
+}
+
+.animated_image {
+    animation: fadeInAndSlideFromLeft 1s ease-out;
+}
+
+
+@keyframes fadeInAndSlideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
