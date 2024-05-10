@@ -7,11 +7,156 @@
     <link rel="stylesheet" href="/public/css/components/header.css">
     <link rel="stylesheet" href="/public/css/components/footer.css">
     <link rel="stylesheet" href="/public/css/views/index.css">
+    <link rel="stylesheet" type="text/css" href="public\css\main.css">
     <title>PublicObras</title>
+    <style>
+        /* Estilos para el cuerpo */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; 
+            margin: 0; 
+            font-family: Arial, sans-serif; 
+        }
+
+        /* Estilos para el encabezado */
+        header {
+            background-color: #333;
+            color: #fff; 
+            padding: 20px;
+        }
+
+        .header_title {
+            margin: 0; 
+            font-size: 24px; 
+        }
+
+        nav {
+            margin-top: 10px; 
+        }
+
+        .header_nav {
+            list-style-type: none; 
+            padding: 0; 
+            display: flex; 
+        }
+
+        .header_nav_li {
+            margin-right: 20px;
+        }
+
+        .header_nav_li:last-child {
+            margin-right: 0; 
+        }
+
+        .header_nav_li a {
+            color: #fff; 
+            text-decoration: none;
+        }
+
+        .header_nav_li a:hover {
+            text-decoration: underline; 
+        }
+
+        /* Estilos para el contenido principal */
+        main {
+            flex: 1; 
+            padding: 20px;
+        }
+
+        .main_content {
+            display: flex; 
+            flex-wrap: wrap; 
+        }
+
+        .artwork {
+            flex: 1; 
+            margin-right: 20px; 
+            margin-bottom: 20px; 
+            padding: 20px; 
+            background-color: #f9f9f9; 
+        }
+
+        .artwork img {
+            width: 100%;
+            height: auto; 
+            margin-bottom: 10px; 
+        }
+
+        /* Estilos para el formulario de contacto */
+        .newsletterSection {
+            background-color: #f9f9f9;
+            padding: 20px; 
+            margin-top: 20px; 
+            text-align: center; 
+        }
+
+        .newsletterTitle {
+            margin-top: 0; 
+        }
+
+        .formulario {
+            max-width: 500px; 
+        }
+
+        .formulario label {
+            display: block; 
+            margin-bottom: 10px; 
+        }
+
+        .formulario input[type="text"],
+        .formulario input[type="email"],
+        .formulario input[type="date"],
+        .formulario textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            box-sizing: border-box; 
+        }
+
+        .formulario button[type="submit"] {
+            background-color: #333; 
+            color: #fff; 
+            border: none; 
+            padding: 10px 20px; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            transition: background-color 0.3s; 
+        }
+
+        .formulario button[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        /* Estilos para el pie de página */
+        footer {
+            background-color: #333; 
+            color: #fff; 
+            padding: 20px; 
+            text-align: center; 
+        }
+
+        .social a {
+            color: #fff; 
+            text-decoration: none; 
+            font-size: 20px; 
+        }
+
+        .social a:hover {
+            color: #bbb; 
+        }
+
+        hr {
+            border-color: #555; 
+            margin: 20px 0; 
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1 class="header_title" ><a href="/">P U B L I C O B R A S</a></h1>
+        <h1 class="header_title"><a href="/">P U B L I C O B R A S</a></h1>
         <nav>
             <ul class="header_nav">
                 <li class="header_nav_li"><a href="/public/views/acerca.html">Acerca de PublicObras</a></li>
@@ -23,58 +168,60 @@
     </header>
 
     <main>
-        <p>Les presentamos nuestra Galería de Arte </p>
-        <p> Van a poder Comprar, Vender, Subastar y Mostrar sus obras de forma gratuita.</p>
-        
-        <h2> Nuestras Obras en exposición</h2>
-        <div>
-
-            <img src="cena.jpeg" alt="Imagen 1">
-            <p>Este Hermoso Cuadro llamado "La Cena",Es una pintura del renacimiento muy reconocida por los grandes pintores</p>
-            <p> Esta siendo subastada con un monto de inicio de $300000</p>
-            <input type="submit" value="Ofertar">
-            <br>
-            <br>
-                    <img src="images.jpeg" alt="Imagen 2">
-                    <p>Esta Bellisima pintura hecha con cubismo es de uno de nuestro recientes clientes.</p>
-                    <p>No esta a la venta</p>
-                    <br>
-                    <img src="Van_Gogh.-Campo-de-trigo-con-cuervos.-1890.webp" alt="Imagen 3">
-                    <p> Una Pintura del Gran artista Van Gogh llamada el Campo de trigo con cuervos</p>
-                    <p>No esta a la Venta</p>
-                </div>
-
+        <p>Les presentamos nuestra Galería de Arte</p>
+        <p>Van a poder Comprar, Vender, Subastar y Mostrar sus obras de forma gratuita.</p>
+        <h2>Nuestras Obras en exposición</h2>
+        <div class="main_content">
+            <div class="artwork">
+                <img src="public\img\cena.jpeg" alt="Imagen 1" class="animated_image">
+                <p>Este Hermoso Cuadro llamado "La Cena", es una pintura del renacimiento muy reconocida por los grandes pintores.</p>
+                <p>Está siendo subastada con un monto de inicio de $300000</p>
+                <input type="submit" value="Ofertar">
+            </div>
+            <div class="artwork">
+                <img src="public\img\images.jpeg" alt="Imagen 2" class="animated_image">
+                <p>Esta Bellísima pintura hecha con cubismo es de uno de nuestros recientes clientes.</p>
+                <p>No está a la venta</p>
+            </div>
+            <div class="artwork">
+                <img src="public\img\Van_Gogh.-Campo-de-trigo-con-cuervos.-1890.webp" alt="Imagen 3" class="animated_image">
+                <p>Una Pintura del Gran artista Van Gogh llamada el Campo de trigo con cuervos</p>
+                <p>No está a la Venta</p>
+            </div>
+        </div>
     </main>
 
-    <section class="newsletterSection">        
-        <h3 class="newsletterTitle">Quieres recibir información sobre las útimas novedades de PublicObras? Suscribite al NewsLetter!</h3>
-
-<!-- Este formulario lo pondria como formulario de contacto no para el Newsletter, que opinan? -->
-
+    <section class="newsletterSection">
+        <h3 class="newsletterTitle">¿Quieres recibir información sobre las últimas novedades de PublicObras?</h3>
+        <h4>Suscríbete al NewsLetter!</h4>
         <form class="formulario">
             <label for="nombre">Nombre</label>
             <input type="text" placeholder="Escribe tu nombre..">
+            <br>
             <label for="apellido">Apellido</label>
             <input type="text" placeholder="Escribe tu apellido..">
-            <label for="genero">Género</label>
-            <input type="radio" name="genero" value="hombre">
-            <label>Hombre</label>
-            <input type="radio" name="genero" value="mujer">
-            <label>Mujer</label>
-            <input type="radio" name="genero" value="otro">
-            <label>Otro</label>
+            <br>
+            <label>Género</label>
+            <input type="radio" name="genero" value="hombre"> Hombre
+            <input type="radio" name="genero" value="mujer"> Mujer
+            <input type="radio" name="genero" value="otro"> Otro
+            <br>
             <label for="date">Fecha de nacimiento</label>
             <input type="date" name="date">
-            <label for="email">Córreo electrónico</label>
+            <br>
+            <label for="email">Correo electrónico</label>
             <input type="email" name="email">
-            <textarea name="textarea" placeholder="Escribí tu consulta..." cols="25" rows="8"></textarea>
+            <br>
+            <textarea name="textarea" placeholder="Escribe tu consulta..." cols="25" rows="8"></textarea>
+            <br>
             <button type="submit">Enviar</button>
         </form>
-    </section> 
+    </section>
 
     <footer>
         <label>Recibe las últimas novedades de PublicObras:
             <input type="email" name="email" placeholder="email@email.com">
+            <br>
             <button type="button">Suscribirme al Newsletter</button>
         </label>
         <div class="social">
@@ -84,7 +231,7 @@
             <a href="www.pinterest.com"><i class="bi bi-pinterest"></i></a>
         </div>
         <hr>
-        <a href="/public/views/terms.html">Terminos y Condiciones</a>
+        <a href="/public/views/terms.html">Términos y Condiciones</a>
         <p>©2024 PublicObras</p>
     </footer>
 
