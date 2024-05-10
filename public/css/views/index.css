@@ -1,4 +1,8 @@
-
+.iframeSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .newsletterSection {
     display: flex;
     flex-direction: column;
