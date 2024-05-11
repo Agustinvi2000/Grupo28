@@ -181,10 +181,6 @@ body{
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
-                    input, textarea {
-                        margin-left: 0;
-                        margin-top: 0.5rem;
-                    }           
                 }
                 .main3{
                     justify-self: center;
