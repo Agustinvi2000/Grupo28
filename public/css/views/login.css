@@ -3,7 +3,6 @@
     background: linear-gradient(to bottom, rgb(209, 159, 192), rgb(104, 225, 104));
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
 }
 
 .loginMain {
@@ -14,8 +13,6 @@
 .loginForm {
     display: flex;
     flex-direction: column;
-    width: 20rem;
-    margin-top: 10rem;
 }
 
 .loginForm_label {
