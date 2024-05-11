@@ -33,14 +33,14 @@
         <h1>Galeria De Arte</h1>
         <h2>Registrate</h2>
         <br>
-        <form action="" method="POST" enctype="application/x-www-form-urlencoded">
+        <form id="registroForm" action="/asdasd" method="POST" enctype="application/x-www-form-urlencoded">
             <label>Nombre De Usuario : <input required  maxlength="15" type="text" name="user" placeholder="Coloque su Usuario" ></label>
             <label>Nombre : <input required maxlength="10" type="text" name="Nombre" placeholder="Colocar su Nombre"></label>
             <label>Apellido/s : <input required  maxlength="20" type="text" name="Apellido" placeholder="Colocar su Apellido/s"></label>
             <label>Mail : <input required   type="text" name="Mail" placeholder="Colocar su mail/s"></label>
             <label>Contraseña : <input type="password" name="pass" placeholder="Escriba su contraseña"></label>
-            <label>Genero : 
-                <select>
+            <label for="genero">Genero : 
+                <select id="genero" name="genero">
                     <option value="0"> </option>
                     <option value="1">Femenino</option>
                     <option value="2">Masculino</option>
@@ -74,5 +74,14 @@
     <a href="../views/terms.html">Terminos y Condiciones</a>
     <p>©2024 PublicObras</p>
 </footer>
+
+
+<script>
+    let form = document.getElementById("registroForm").addEventListener("submit", (e) =>{
+        e.preventDefault()
+        alert("Su cuenta fue creada exitosamente")
+        window.location.href = "/"
+    })
+</script>
 </body>
 </html>
