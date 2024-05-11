@@ -3,166 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/normalize.css">
-    <link rel="stylesheet" href="/public/css/components/header.css">
-    <link rel="stylesheet" href="/public/css/components/footer.css">
-    <link rel="stylesheet" href="/public/css/views/index.css">
-    <link rel="stylesheet" type="text/css" href="public\css\main.css">
+    <link rel="stylesheet" href="public\css\normalize.css">
+    <link rel="stylesheet" href="public\css\main.css">
+    <link rel="stylesheet" href="public\css\components\header.css">
+    <link rel="stylesheet" href="public\css\components\footer.css">
+    <link rel="icon" href="public\img\favicon.ico">
+
     <title>PublicObras</title>
-    <style>
-        /* Estilos para el cuerpo */
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh; 
-            margin: 0; 
-            font-family: Arial, sans-serif; 
-        }
-
-        /* Estilos para el encabezado */
-        header {
-            background-color: #333;
-            color: #fff; 
-            padding: 20px;
-        }
-
-        .header_title {
-            margin: 0; 
-            font-size: 24px; 
-        }
-
-        nav {
-            margin-top: 10px; 
-        }
-
-        .header_nav {
-            list-style-type: none; 
-            padding: 0; 
-            display: flex; 
-        }
-
-        .header_nav_li {
-            margin-right: 20px;
-        }
-
-        .header_nav_li:last-child {
-            margin-right: 0; 
-        }
-
-        .header_nav_li a {
-            color: #fff; 
-            text-decoration: none;
-        }
-
-        .header_nav_li a:hover {
-            text-decoration: underline; 
-        }
-
-        /* Estilos para el contenido principal */
-        main {
-            flex: 1; 
-            padding: 20px;
-        }
-
-        .main_content {
-            display: flex; 
-            flex-wrap: wrap; 
-        }
-
-        .artwork {
-            flex: 1; 
-            margin-right: 20px; 
-            margin-bottom: 20px; 
-            padding: 20px; 
-            background-color: #f9f9f9; 
-        }
-
-        .artwork img {
-            width: 100%;
-            height: auto; 
-            margin-bottom: 10px; 
-        }
-
-        /* Estilos para el formulario de contacto */
-        .newsletterSection {
-            background-color: #f9f9f9;
-            padding: 20px; 
-            margin-top: 20px; 
-            text-align: center; 
-        }
-
-        .newsletterTitle {
-            margin-top: 0; 
-        }
-
-        .formulario {
-            max-width: 500px; 
-        }
-
-        .formulario label {
-            display: block; 
-            margin-bottom: 10px; 
-        }
-
-        .formulario input[type="text"],
-        .formulario input[type="email"],
-        .formulario input[type="date"],
-        .formulario textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px; 
-            border: 1px solid #ccc; 
-            border-radius: 5px; 
-            box-sizing: border-box; 
-        }
-
-        .formulario button[type="submit"] {
-            background-color: #333; 
-            color: #fff; 
-            border: none; 
-            padding: 10px 20px; 
-            border-radius: 5px; 
-            cursor: pointer; 
-            transition: background-color 0.3s; 
-        }
-
-        .formulario button[type="submit"]:hover {
-            background-color: #555;
-        }
-
-        /* Estilos para el pie de página */
-        footer {
-            background-color: #333; 
-            color: #fff; 
-            padding: 20px; 
-            text-align: center; 
-        }
-
-        .social a {
-            color: #fff; 
-            text-decoration: none; 
-            font-size: 20px; 
-        }
-
-        .social a:hover {
-            color: #bbb; 
-        }
-
-        hr {
-            border-color: #555; 
-            margin: 20px 0; 
-        }
-    </style>
 </head>
 <body>
     <header>
         <h1 class="header_title"><a href="/">P U B L I C O B R A S</a></h1>
         <nav>
             <ul class="header_nav">
-                <li class="header_nav_li"><a href="/public/views/acerca.html">Acerca de PublicObras</a></li>
-                <li class="header_nav_li"><a href="/public/views/Proyecto_1.html">Crear Cuenta</a></li>
-                <li class="header_nav_li"><a href="/public/views/galeria.html">Galeria</a></li>
-                <li class="header_nav_li"><a href="/public/views/login.html">Login</a></li>
+                <li class="header_nav_li"><a href="public\views\acerca.html">Acerca de PublicObras</a></li>
+                <li class="header_nav_li"><a href="public\views\registro.html">Crear Cuenta</a></li>
+                <li class="header_nav_li"><a href="public\views\galeria.html">Galeria</a></li>
+                <li class="header_nav_li"><a href="public\views\login.html">Login</a></li>
+                <li class="header_nav_li"><a href="public\views\contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -192,11 +50,11 @@
     </main>
 
     <section class="iframeSection">
-        <h3>Querés exponer tus obras y no sabes cómo?, en este video te mostramos todo lo que tenés que saber para hacerlo.</h3>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/BNXtO1snd7I?si=HohbAvti0ir4kaZ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h3>Querés exponer tus obras y no sabes cómo?<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#A96424"><path d="M480-418q-67.33 0-122.17 37.83Q303-342.33 277.33-280h405.34q-25-63-80.17-100.5T480-418Zm-178-68 48-44 44 44 34.67-38-44-44 44-44.67-34.67-38-44 44-48-44-34.67 38 44 44.67-44 44L302-486Zm264.67 0L610-530l48.67 44 34.66-38-44-44 44-44.67-34.66-38-48.67 44-43.33-44-34.67 38L575.33-568 532-524l34.67 38ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 333.33q139.33 0 236.33-97t97-236.33q0-139.33-97-236.33t-236.33-97q-139.33 0-236.33 97t-97 236.33q0 139.33 97 236.33t236.33 97Z"/></svg>, en este video <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M440-240v-368L296-464l-56-56 240-240 240 240-56 56-144-144v368h-80Z"/></svg> te mostramos todo lo que tenés que saber para hacerlo.</h3>
     </section>
 
-    <section class="newsletterSection">
+    <!-- <section class="newsletterSection">
         <h3 class="newsletterTitle">¿Quieres recibir información sobre las últimas novedades de PublicObras?</h3>
         <h4>Suscríbete al NewsLetter!</h4>
         <form class="formulario">
@@ -221,7 +79,7 @@
             <br>
             <button type="submit">Enviar</button>
         </form>
-    </section>
+    </section> -->
 
     <footer>
         <label>Recibe las últimas novedades de PublicObras:
@@ -236,7 +94,7 @@
             <a href="www.pinterest.com"><i class="bi bi-pinterest"></i></a>
         </div>
         <hr>
-        <a href="/public/views/terms.html">Términos y Condiciones</a>
+        <a href="public\views\terms.html">Términos y Condiciones</a>
         <p>©2024 PublicObras</p>
     </footer>
 

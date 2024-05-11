@@ -1,5 +1,5 @@
 body{
-    width: 70vw;
+    /* width: 70vw; */
     margin: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -15,8 +15,8 @@ body{
     header {
         grid-area: header;
         nav {
-            display: flex;
-            justify-content: center;
+            /* display: flex;
+            justify-content: center; */
 
             .header_title_nav_li {
                 display: none;
@@ -74,7 +74,7 @@ body{
                 grid-area: main9;
                 display: flex;
                 justify-self: center;
-                width: 80%; /* Ajusta el ancho del textarea al 80% del contenedor */
+                width: 80%;
             }
             .main10{
                 grid-area: main10;
@@ -92,7 +92,7 @@ body{
             margin-bottom: 1.5rem;
             margin-left: 0.5rem;
             width: 100%;
-            height: 150px; /* Ajusta la altura del textarea a 150px */
+            height: 150px;
         }
     }
     footer {
