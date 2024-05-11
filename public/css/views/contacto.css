@@ -2,16 +2,16 @@ body{
     /* width: 70vw; */
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-areas: 
-    "header header header header"
-    "main0 main0 main0 main0"
-    "main1 main1 main2 main2"
-    "main3 main4 main5 main6" 
-    "main7 main7 main8 main8"
-    "main9 main9 main9 main9"
-    "main10 main10 main10 main10"
-    "footer footer footer footer";
+    "header header header header header header"
+    "main0 main0 main0 main0 main0 main0"
+    "a main1 main1 main2 main2 z"
+    "a main3 main4 main5 main6 z" 
+    "a main7 main7 main8 main8 z"
+    "a main9 main9 main9 main9 z"
+    "main10 main10 main10 main10 main10 main10"
+    "footer footer footer footer footer footer";
     header {
         grid-area: header;
         nav {
@@ -97,13 +97,14 @@ body{
     }
     footer {
         grid-area: footer;
-        display: flex;
-        flex-direction: column;
+        /* display: flex;
+        flex-direction: column; */
     }
 }
 
 @media screen and (max-width: 768px){
     body{
+        grid-template-columns: repeat(4, 1fr);
         grid-template-areas: 
         "header header header header"
         "main0 main0 main0 main0"
