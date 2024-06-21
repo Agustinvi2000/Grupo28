@@ -33,7 +33,7 @@
         <h1>Galeria De Arte</h1>
         <h2>Registrate</h2>
         <br>
-        <form id="registroForm">
+        <form id="registroForm" action="/registro" method="post">
             <label>Nombre De Usuario : <input required  maxlength="15" type="text" name="user" placeholder="Coloque su Usuario" ></label>
             <label>Nombre : <input required maxlength="10" type="text" name="Nombre" placeholder="Colocar su Nombre"></label>
             <label>Apellido/s : <input required  maxlength="20" type="text" name="Apellido" placeholder="Colocar su Apellido/s"></label>
@@ -76,13 +76,11 @@
 
 
 <script>
-    let form = document.getElementById("registroForm").addEventListener("submit", (e) =>{
-        e.preventDefault()
-        alert("Su cuenta fue creada exitosamente")
-        window.location.href = "https://agustinvi2000.github.io/Grupo28/"
-
-       
-    })
+    // let form = document.getElementById("registroForm").addEventListener("submit", (e) =>{
+    //     e.preventDefault()
+    //     alert("Su cuenta fue creada exitosamente")
+    //     window.location.href = "https://agustinvi2000.github.io/Grupo28/"       
+    // })
 </script>
 </body>
 </html>
