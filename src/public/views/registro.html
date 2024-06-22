@@ -33,21 +33,21 @@
         <h1>Galeria De Arte</h1>
         <h2>Registrate</h2>
         <br>
-        <form id="registroForm" action="/registro" method="post">
+        <form id="registroForm" action="http://localhost:8080/registro" method="post">
             <label>Nombre De Usuario : <input required  maxlength="15" type="text" name="user" placeholder="Coloque su Usuario" ></label>
-            <label>Nombre : <input required maxlength="10" type="text" name="Nombre" placeholder="Colocar su Nombre"></label>
-            <label>Apellido/s : <input required  maxlength="20" type="text" name="Apellido" placeholder="Colocar su Apellido/s"></label>
-            <label>Mail : <input required   type="text" name="Mail" placeholder="Colocar su mail/s"></label>
+            <label>Nombre : <input required maxlength="10" type="text" name="nombre" placeholder="Colocar su Nombre"></label>
+            <label>Apellido/s : <input required  maxlength="20" type="text" name="apellido" placeholder="Colocar su Apellido/s"></label>
+            <label>Mail : <input required   type="text" name="mail" placeholder="Colocar su mail/s"></label>
             <label>Contraseña : <input type="password" name="pass" placeholder="Escriba su contraseña"></label>
             <label for="genero">Genero : 
                 <select id="genero" name="genero">                    
-                    <option value="1">Femenino</option>
-                    <option value="2">Masculino</option>
-                    <option value="3">Otro</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Otro">Otro</option>
                 </select>
             </label>
             
-                <label>Fecha de Nacimiento :<input type="date"  name="Fecha" ></label>
+                <label>Fecha de Nacimiento :<input type="date"  name="fecha_nacimiento" ></label>
             
             <label><input type="checkbox" name="do" >He leido y acepto los terminos
                 y condicionesde uso</label>
@@ -74,13 +74,5 @@
     <p>©2024 PublicObras</p>
 </footer>
 
-
-<script>
-    // let form = document.getElementById("registroForm").addEventListener("submit", (e) =>{
-    //     e.preventDefault()
-    //     alert("Su cuenta fue creada exitosamente")
-    //     window.location.href = "https://agustinvi2000.github.io/Grupo28/"       
-    // })
-</script>
 </body>
 </html>
