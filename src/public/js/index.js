@@ -33,6 +33,3 @@ if (decodedToken.rol == "admin") {
     let a = document.getElementById("linkDeEdicion")
     a.textContent = "editar y eliminar en DB"
 }
-
-
-

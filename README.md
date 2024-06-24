@@ -6,3 +6,5 @@ instalar de npm:
 1. express
 2. nodemon 
 3. mysql2
+4. jsonwebtoken
+5. bcrypt

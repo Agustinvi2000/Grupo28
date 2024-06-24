@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/components/header.css">
-    <link rel="stylesheet" href="../css/components/footer.css">    
+    <link rel="stylesheet" href="../css/components/footer.css">
+    <link rel="stylesheet" href="../css/views/editar.css">
     <link rel="icon" href="../img/favicon.ico">
     <title>Editar</title>
 </head>
@@ -25,8 +26,18 @@
         </nav>
     </header>
 
-    <main>
-        <h2>Vista para realizar el PUT y el DELETE en construcción....</h2>
+    <main class="editarMain">
+        <label>Coloque id para deshabilitar usuario:
+            <input type="text" class="editarInput" name="idDeshabilitar" placeholder="nro de id">
+            <button type="button" class="editarButton" id="botonDeshabilitar">Enviar</button>
+        </label>
+
+        <label>Coloque id para eliminar publicación:
+            <input type="text" class="editarInput" name="idEliminar" placeholder="nro de id">
+            <button type="button" class="editarButton" id="botonEliminar">Enviar</button>
+        </label>
+        
+        <!-- <h2>Vista para realizar el PUT y el DELETE en construcción....</h2> -->
     </main>
 
 
@@ -49,5 +60,7 @@
         <p>©2024 PublicObras</p>
     </footer>
     
+    <script src="../js/editar.js"></script>
+
 </body>
 </html>
