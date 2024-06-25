@@ -3,6 +3,7 @@ import cookieParser from "cookie-parser"
 import { pool } from "./db/dbconnect.js"
 import { registroController } from "./controllers/registroController.js"
 import { loginController } from "./controllers/loginController.js"
+import { editController } from "./controllers/editController.js"
 
 const PORT = 8080
 
@@ -23,13 +24,14 @@ connectDB();
 
 app.use(express.json()) //para que nuestro servidor convierta automaticamente json a objetos js y manipularlos directamente del req.body 
 app.use(express.urlencoded({extended: true}))//para que el req.body pueda contener cualquier tipo de datos
-app.use(express.static("../src/public"))//Para servir contenido estatico de mi carpeta public
+app.use(express.static("./src/public"))//Para servir contenido estatico de mi carpeta public
 
 app.use(cookieParser("codoAcodo"))//Para el manejo sencillo de cookies al usar jwt
 
 //RUTAS
 app.post("/registro", registroController)
 app.post("/login", loginController)
+app.put("/edit/:id", editController)
 
 
 //RUTAS

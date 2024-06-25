@@ -18,6 +18,11 @@ const loginController = async (req, res) => {
         // Tomo el primer usuario encontrado (debería ser único por restricción única)
         const usuario = users[0];
 
+        //No dejo pasar si el rol es deshabilitado
+        if (usuario.rol == "deshabilitado") {
+            return res.status(401).json({ error: 'Usuario deshabilitado' });
+        }
+
          // Comparar la contraseña proporcionada con la contraseña encriptada almacenada en la base de datos
          const passwordMatch = await bcrypt.compare(pass, usuario.pass);
 
