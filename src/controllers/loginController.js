@@ -37,8 +37,8 @@ const loginController = async (req, res) => {
          res.cookie("userCookie", token)
         
         res.setHeader("Content-Type", "application/json")
-        res.status(200).json(usuario)
-        // res.status(200).redirect("/")
+        // res.status(200).json(usuario)
+        res.status(200).redirect("/")
         
     } catch (error) {
         res.setHeader("Content-Type", "application/json")

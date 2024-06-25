@@ -18,8 +18,8 @@ const registroController = async (req, res) => {
         );        
 
         res.setHeader("Content-Type", "application/json")
-        res.status(201).json({ id: result.insertId, user, nombre, apellido, mail, hashedPassword, genero, fecha_nacimiento, rol });
-        // res.status(201).redirect("/")
+        // res.status(201).json({ id: result.insertId, user, nombre, apellido, mail, hashedPassword, genero, fecha_nacimiento, rol });
+        res.status(201).redirect("/")
     } catch (error) {
         res.setHeader("Content-Type", "application/json")
         return res.status(500).json("Error inesperado en el servidor al registrar usuario")

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/components/footer.css">
     <link rel="stylesheet" href="./css/main.css">
     <script defer src="./js/index.js"></script>
+    <script defer src="./js/suscribirse.js"></script>
     <link rel="icon" href="./img/favicon.ico">
 
     <title>PublicObras</title>
@@ -57,41 +58,15 @@
     <section class="iframeSection">
         <iframe src="https://www.youtube.com/embed/BNXtO1snd7I?si=HohbAvti0ir4kaZ4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <h3>Querés exponer tus obras y no sabes cómo?<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#A96424"><path d="M480-418q-67.33 0-122.17 37.83Q303-342.33 277.33-280h405.34q-25-63-80.17-100.5T480-418Zm-178-68 48-44 44 44 34.67-38-44-44 44-44.67-34.67-38-44 44-48-44-34.67 38 44 44.67-44 44L302-486Zm264.67 0L610-530l48.67 44 34.66-38-44-44 44-44.67-34.66-38-48.67 44-43.33-44-34.67 38L575.33-568 532-524l34.67 38ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 333.33q139.33 0 236.33-97t97-236.33q0-139.33-97-236.33t-236.33-97q-139.33 0-236.33 97t-97 236.33q0 139.33 97 236.33t236.33 97Z"/></svg>, en este video <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M440-240v-368L296-464l-56-56 240-240 240 240-56 56-144-144v368h-80Z"/></svg> te mostramos todo lo que tenés que saber para hacerlo.</h3>
-    </section>
-
-    <!-- <section class="newsletterSection">
-        <h3 class="newsletterTitle">¿Quieres recibir información sobre las últimas novedades de PublicObras?</h3>
-        <h4>Suscríbete al NewsLetter!</h4>
-        <form class="formulario">
-            <label for="nombre">Nombre</label>
-            <input type="text" placeholder="Escribe tu nombre..">
-            <br>
-            <label for="apellido">Apellido</label>
-            <input type="text" placeholder="Escribe tu apellido..">
-            <br>
-            <label>Género</label>
-            <input type="radio" name="genero" value="hombre"> Hombre
-            <input type="radio" name="genero" value="mujer"> Mujer
-            <input type="radio" name="genero" value="otro"> Otro
-            <br>
-            <label for="date">Fecha de nacimiento</label>
-            <input type="date" name="date">
-            <br>
-            <label for="email">Correo electrónico</label>
-            <input type="email" name="email">
-            <br>
-            <textarea name="textarea" placeholder="Escribe tu consulta..." cols="25" rows="8"></textarea>
-            <br>
-            <button type="submit">Enviar</button>
-        </form>
-    </section> -->
+    </section> 
 
     <footer>
-        <label>Recibe las últimas novedades de PublicObras:
-            <input type="email" name="email" placeholder="email@email.com">
+        <label for="newsletter">Recibe las últimas novedades de PublicObras:
+            <input type="email" name="newsletter" id="newsletter" placeholder="email@email.com">
         </label>
             <br>
-            <button type="button">Suscribirme al Newsletter</button>
+            <button type="button" onclick="suscribirse()">Suscribirme al Newsletter</button>
+
         <div class="social">
             <p>Seguinos en nuestras redes</p>
             <a href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>

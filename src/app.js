@@ -5,6 +5,7 @@ import { registroController } from "./controllers/registroController.js"
 import { loginController } from "./controllers/loginController.js"
 import { editController } from "./controllers/editController.js"
 import { deleteController } from "./controllers/deleteController.js"
+import { suscribirseController } from "./controllers/suscribirseController.js"
 
 const PORT = 8080
 
@@ -38,6 +39,7 @@ app.post("/registro", registroController)
 app.post("/login", loginController)
 app.put("/edit/:id", editController)
 app.delete("/delete/:id", deleteController)
+app.post("/suscribirse", suscribirseController)
 
 
 //RUTAS

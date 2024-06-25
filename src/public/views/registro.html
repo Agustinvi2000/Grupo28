@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="../css/components/footer.css">
         <link rel="stylesheet" href="../css/views/registro.css">
         <link rel="icon" href="../img/favicon.ico">
+        <script defer src="./js/suscribirse.js"></script>
 
         <title>PublicObras - Crear Cuenta</title>
     </head>
@@ -59,10 +60,12 @@
 </main>
 
 <footer>
-    <label>Recibe las últimas novedades de PublicObras:
-        <input type="email" name="email" placeholder="email@email.com">
+    <label for="newsletter">Recibe las últimas novedades de PublicObras:
+        <input type="email" name="newsletter" id="newsletter" placeholder="email@email.com">
     </label>
-    <button type="button">Suscribirme al Newsletter</button>
+        <br>
+        <button type="button" onclick="suscribirse()">Suscribirme al Newsletter</button>
+
     <div class="social">
         <p>Seguinos en nuestras redes</p>
         <a href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
