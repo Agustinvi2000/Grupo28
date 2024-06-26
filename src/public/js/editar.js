@@ -5,7 +5,7 @@ botonDeshabilitar.addEventListener("click", async (e) => {
     let userId = document.getElementById("userId").value
     console.log(userId)
     try {
-        const resultado = await fetch(`http://localhost:8080/edit/${userId}`, {method: "PUT"})
+        const resultado = await fetch(`/edit/${userId}`, {method: "PUT"})
         
         let response = await resultado.json()
         alert(response.message)
@@ -26,7 +26,7 @@ botonEliminar.addEventListener("click", async (e) => {
     let publicacionId = document.getElementById("publicacionId").value
     console.log(publicacionId)
     try {
-        const resultado = await fetch(`http://localhost:8080/delete/${publicacionId}`, {method: "DELETE"})
+        const resultado = await fetch(`/delete/${publicacionId}`, {method: "DELETE"})
         
         let response = await resultado.json()
         alert(response.message)
