@@ -29,7 +29,25 @@ function validacion(){
 
 menu.addEventListener("click", onOff);
 form.addEventListener("submit",(e) => {
-    if(!validacion()){
-        e.preventDefault();
+
+    e.preventDefault();
+
+    if(!validacion()){ 
+        return;
     }
+
+        const nombre = document.querySelector('input[name="nombre"]').value;
+        const apellido = document.querySelector('input[name="apellido"]').value;
+        const genero = document.querySelector('input[name="genero"]:checked') ? document.querySelector('input[name="genero"]:checked').value : '';
+        const fechaNacimiento = document.querySelector('input[name="date"]').value;
+        const email = document.querySelector('input[name="email"]').value;
+        const comentarios = document.querySelector('textarea[name="textarea"]').value;
+
+        let emailBody = `Contacto:\n\nNombre: ${nombre}\nApellido: ${apellido}\nGénero: ${genero}\nFecha de nacimiento: ${fechaNacimiento}\nCorreo electrónico: ${email}\nComentarios: ${comentarios}\n\nMensaje enviado desde el formulario de PublicObras`;
+
+        emailBody = encodeURIComponent(emailBody);
+
+        const mailtoLink = `mailto:contacto@publicobras.com?subject=Contacto%20desde%20el%20sitio%20web&body=${emailBody}`;
+
+        window.location.href = mailtoLink;
 });
