@@ -37,7 +37,17 @@
             <button type="button" class="editarButton" id="botonEliminar">Enviar</button>
         </label>
         
-        <!-- <h2>Vista para realizar el PUT y el DELETE en construcción....</h2> -->
+        <form id="publicarForm" action="/publicar" method="POST" enctype="multipart/form-data">
+            <label for="userId">Coloque id del usuario que publica:
+                <input type="number" class="editarInput", id="userIdPublicar" name="userIdPublicar" placeholder="nro de id">
+            </label>
+            <label>Archivo :<input type="file"  name="archivo" ></label>
+            <label>Autor :<input type="text"  name="autor" ></label>
+            <label>Descripción :<textarea name="descripcion" ></textarea></label>
+            <input type="submit"  class="editarButton" value="Subir publicación">
+        </form>
+
+
     </main>
 
 

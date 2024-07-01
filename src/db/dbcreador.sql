@@ -19,6 +19,8 @@ CREATE TABLE galeria (
     id INT(11) AUTO_INCREMENT PRIMARY KEY,
     path VARCHAR(255) NOT NULL,
     archivo VARCHAR(255) NOT NULL,
+    autor VARCHAR(255) NOT NULL,
+    descripcion VARCHAR(255) NOT NULL,
     userId INT(11),
     FOREIGN KEY (userId) REFERENCES users(id)
 );

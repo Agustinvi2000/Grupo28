@@ -20,3 +20,16 @@
     align-items: center;
 }
 
+form#publicarForm {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+form#publicarForm label {
+    margin-bottom: 10px;
+}
+
+form#publicarForm input[type="submit"] {
+    align-self: flex-start;
+}

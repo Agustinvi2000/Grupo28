@@ -1,0 +1,23 @@
+#carousel-placeholder {
+    width: 75% !important;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comentarButton {
+    margin-top: 1.5rem;
+    height: 1.5rem;
+    background-color: rgb(104, 225, 104);
+    color: white;
+    font-weight: bolder; 
+}
+
+.carousel-comentario {
+    display: flex;
+    flex-direction: column;
+}
