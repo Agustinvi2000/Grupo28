@@ -10,15 +10,16 @@ import { galeriaController } from "./controllers/galeriaController.js"
 import { comentariosController } from './controllers/comentariosController.js';
 
 // MULTER
-import path from "path";
+// import path from "path";
 import { publicarController } from "./controllers/publicarController.js"
 import multer from "multer"
 
-const __dirname = path.resolve();
+// const __dirname = path.resolve();
 const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, '/public/uploads/'));
-    },
+    // destination: (req, file, cb) => {
+    //     cb(null, path.join(__dirname, '/public/uploads/'));
+    // },
+    destination: './src/public/uploads/',
     filename: (req, file, cb) => {
         cb(null, Date.now() + "_" + file.originalname)
     }
