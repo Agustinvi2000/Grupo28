@@ -25,7 +25,6 @@
 
 .loginForm_input {
     margin-bottom: 0.5rem;
-    background-color: rgb(209, 159, 192);
     color: white;
     font-weight: bolder;
 }
@@ -33,7 +32,9 @@
 .loginButton {
     margin-top: 1.5rem;
     height: 1.5rem;
-    background-color: rgb(104, 225, 104);
-    color: white;
+    color: black;
     font-weight: bolder; 
+}
+nav{
+    background-color: beige;
 }
