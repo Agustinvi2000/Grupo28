@@ -1,9 +1,30 @@
 main {
     margin: 50px;
-    text-align: justify;
+    text-align: center;
+
     
     p {
         margin-top: 5px;
         margin-bottom: 10px
     }
+
+    h1{
+            color:purple;
+            
+            
+    }
+
+    h2{
+        color: rgb(85, 26, 85)
+    }
+}
+
+body {
+    background: linear-gradient(to bottom, rgb(209, 159, 192), rgb(104, 225, 104));
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav{
+    background-color: beige;
 }
