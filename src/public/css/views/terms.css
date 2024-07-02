@@ -7,3 +7,13 @@ main {
         margin-bottom: 10px
     }
 }
+
+body {
+    background: linear-gradient(to bottom, rgb(209, 159, 192), rgb(104, 225, 104));
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav {
+    background-color: beige;
+}
