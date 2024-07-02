@@ -1,3 +1,61 @@
+/* Lineas para anular estilos de Bootstrap no buscados */
+a {
+    color: revert;
+    text-decoration: inherit;
+}
+
+.h1, h1 {
+    font-size: revert;
+}
+
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-weight: revert;
+    line-height: revert;
+    color: revert;
+}
+
+
+body {
+    margin: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    text-align: inherit;
+    background-color: inherit;
+    -webkit-text-size-adjust: inherit;
+    -webkit-tap-highlight-color: inherit;
+}
+
+dl, ol, ul {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+ol, ul {
+    padding-left: inherit;
+}
+
+hr {
+    margin: auto;
+    color: inherit;
+    border: revert;
+    border-top: revert;
+    opacity: revert;
+}
+
+p {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* Hasta aquí  */
+
+
 body {
     background: linear-gradient(to bottom, rgb(209, 159, 192), rgb(104, 225, 104));
     background-size: cover;
@@ -14,7 +72,7 @@ nav {
     align-items: center;
 }
 
-.carousel {
+#carousel-placeholder {
     position: relative;
     width: 80%;
     max-width: 600px;
@@ -52,6 +110,13 @@ nav {
     border: none;
     padding: 10px;
     cursor: pointer;
+}
+
+.carousel-comentar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .prev {
