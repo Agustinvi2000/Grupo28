@@ -1,7 +1,7 @@
 main {
     h1{
         text-align: center;
-        color: violet;
+        color: purple;
     }
     
     h2 {
@@ -18,4 +18,13 @@ main {
         }
     
     }
+}
+body {
+    background: linear-gradient(to bottom, rgb(209, 159, 192), rgb(104, 225, 104));
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav{
+    background-color: beige;
 }
