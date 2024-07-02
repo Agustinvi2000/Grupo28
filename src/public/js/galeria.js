@@ -113,6 +113,4 @@ document.querySelectorAll('.comentarButton').forEach(button => {
         }
     });
 });
-
-
 };
