@@ -5,9 +5,12 @@ document.querySelector('body').onload = async () => {
     
     let carouselIndicators = '';
     let carouselInner = '';
+    let carouselComentar ='';
     let carouselComentarios = '';
-
+    
+console.log(datos)
     datos.forEach((image, index) => {
+console.log(image.comentarios)
         const isActive = index === 0 ? 'active' : '';
 
         carouselIndicators += `<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="${index}" class="${isActive}" aria-current="true" aria-label="Slide ${index + 1}"></button>`;
@@ -15,17 +18,28 @@ document.querySelector('body').onload = async () => {
             <div class="carousel-item ${isActive}">
                 <img src="${image.path}${image.archivo}" class="d-block w-100">
             </div>`;
-carouselComentarios += `                
-                <div class="carousel-comentario ${isActive ? '' : 'd-none'}">
+carouselComentar += `                
+                <div class="carousel-comentar ${isActive ? '' : 'd-none'}">
                     <h5>Autor: ${image.autor}</h5>
                     <p>${image.descripcion}</p>
                     <p>Id Usuario: ${image.userId}</p>
                     <br>
-                    <p>Comente la foto</p>
+                    <h5>Comente la foto:</h5>
                     <textarea name="comentario-${image.id}"></textarea>
                     <button type="button" class="comentarButton" data-image-id="${image.id}" data-user-id="${image.userId}">Enviar</button>
                     
                 </div>`;
+
+                // Renderizar los comentarios
+                let comentariosHtml = '<br><h5>Comentarios:</h5>';
+                image.comentarios.forEach((comentario, indice) => {
+                    comentariosHtml += `<p>${indice + 1}: ${comentario.comentario}</p>`;
+                });
+                carouselComentarios += `                
+                <div class="carousel-comentario ${isActive ? '' : 'd-none'}">
+                    ${comentariosHtml}
+                </div>`;
+
     });
 
     const carouselHtml = `
@@ -45,6 +59,7 @@ carouselComentarios += `
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+        ${carouselComentar}
         ${carouselComentarios}
         `;
     
@@ -55,7 +70,16 @@ carouselComentarios += `
 // Función para manejar el cambio de slide
 carousel.addEventListener('slid.bs.carousel', function() {
     const activeIndex = Array.from(carousel.querySelectorAll('.carousel-item')).findIndex(item => item.classList.contains('active'));
+    const carouselComentarItems = document.querySelectorAll('.carousel-comentar');
     const carouselComentariosItems = document.querySelectorAll('.carousel-comentario');
+
+    carouselComentarItems.forEach((item, index) => {
+        if (index === activeIndex) {
+            item.classList.remove('d-none');
+        } else {
+            item.classList.add('d-none');
+        }
+    });
 
     carouselComentariosItems.forEach((item, index) => {
         if (index === activeIndex) {
@@ -82,6 +106,7 @@ document.querySelectorAll('.comentarButton').forEach(button => {
             });
 
             const response = await resultado.json();
+            document.querySelector(`textarea[name="comentario-${imagenId}"]`).value = '';
             alert(response.message);
         } catch (error) {
             console.error('Error al agregar comentario:', error);

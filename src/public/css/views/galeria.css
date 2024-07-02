@@ -1,5 +1,5 @@
 #carousel-placeholder {
-    width: 75% !important;
+    /* width: 75% !important; */
     text-align: center;
 }
 
@@ -15,6 +15,11 @@ main {
     background-color: rgb(104, 225, 104);
     color: white;
     font-weight: bolder; 
+}
+
+.carousel-comentar {
+    display: flex;
+    flex-direction: column;
 }
 
 .carousel-comentario {
