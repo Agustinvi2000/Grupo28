@@ -1,28 +1,63 @@
-#carousel-placeholder {
-    /* width: 75% !important; */
-    text-align: center;
+body {
+    background: linear-gradient(to bottom, rgb(209, 159, 192), rgb(104, 225, 104));
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-main {
+nav {
+    background-color: beige;
+}
+
+.main {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.comentarButton {
-    margin-top: 1.5rem;
-    height: 1.5rem;
-    background-color: rgb(104, 225, 104);
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    display: none;
+    min-width: 100%;
+    transition: opacity 0.5s ease;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    font-weight: bolder; 
+    border: none;
+    padding: 10px;
+    cursor: pointer;
 }
 
-.carousel-comentar {
-    display: flex;
-    flex-direction: column;
+.prev {
+    left: 10px;
 }
 
-.carousel-comentario {
-    display: flex;
-    flex-direction: column;
+.next {
+    right: 10px;
 }
