@@ -1,4 +1,4 @@
-h2, h3, h4, div, p {
+h3, h4, div, p {
     text-align: center;
 }
 
@@ -49,7 +49,12 @@ body {
 /* / Estilos para el contenido principal / */
 main {
     flex: 1; 
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.bienvenida {
+    margin-bottom: 20px;
 }
 
 .main_content {

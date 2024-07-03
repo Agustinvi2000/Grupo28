@@ -1,0 +1,73 @@
+
+header {
+    nav {
+        .header_title_nav_li {
+            display: none;
+        }
+    }
+    .menu {
+        display: none;
+    }
+    .header_title {
+        display: block;
+    }
+}    
+
+@media screen and (max-width: 320px){
+    header {
+        border-bottom: 0;
+        margin-bottom: 0;
+        position: absolute;
+        z-index: 2; /* El header se superpone al main */
+        .menu {
+            display: flex;
+            position: absolute;
+            top: 10px;
+            left:0;
+            padding-left: 10px;
+        }
+        .header_title {
+            display: none;
+        }
+        nav{
+            .header_nav{
+                flex-direction: column;
+            }
+            .ocultar {
+                display: none;
+                }
+            .header_title_nav_li{
+                display: flex;
+                padding: 1rem;
+                font-size: large;
+                font-weight: bold;
+            }
+            ul {
+                position:absolute;
+                top: 38px;
+                left:0;
+                background:#eee;
+                padding:0;
+                li {
+                    float:none;
+                    width:210px
+                }
+            }
+        }
+    }
+    main {
+        position: relative; /* Se coloca en el flujo normal del documento */
+        padding-top: 50px;
+        z-index: 1; /* Valor menor que el header para que quede debajo */    }
+    
+    iframe {
+        width: auto;
+        height: auto;
+        border-width: 0;
+    }
+
+    .iframeTexto {
+        width: auto;
+        height: auto;
+    }
+}

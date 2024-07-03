@@ -8,9 +8,9 @@ document.querySelector('body').onload = async () => {
     let carouselComentar ='';
     let carouselComentarios = '';
     
-console.log(datos)
+// console.log(datos)
     datos.forEach((image, index) => {
-console.log(image.comentarios)
+// console.log(image.comentarios)
         const isActive = index === 0 ? 'active' : '';
 
         carouselIndicators += `<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="${index}" class="${isActive}" aria-current="true" aria-label="Slide ${index + 1}"></button>`;
@@ -26,7 +26,7 @@ carouselComentar += `
                     <br>
                     <div class="comentar">
                         <h5>Comente la foto:</h5>
-                        <textarea name="comentario-${image.id}"></textarea>
+                        <textarea name="comentario-${image.id}" placeholder="Escriba un comentario..."></textarea>
                         <button type="button" class="comentarButton" data-image-id="${image.id}" data-user-id="${image.userId}">Enviar</button>
                     </div>
                 </div>`;

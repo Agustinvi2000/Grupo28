@@ -8,24 +8,29 @@
         <link rel="stylesheet" href="../css/components/header.css">
         <link rel="stylesheet" href="../css/components/footer.css">
         <link rel="stylesheet" href="../css/views/registro.css">
+        <link rel="stylesheet" href="../css/components/menu.css">
         <link rel="icon" href="../img/favicon.ico">
         <script defer src="../js/suscribirse.js"></script>
+        <script defer src="../js/menu.js"></script>
 
         <title>PublicObras - Crear Cuenta</title>
     </head>
     <body>
-    <header>
-        <h1 class="header_title" ><a href="../../">P U B L I C O B R A S</a></h1>
-        <nav>
-            <ul class="header_nav">
-                <li class="header_nav_li"><a href="../views/acerca.html">Acerca de PublicObras</a></li>
-                <li class="header_nav_li"><a href="../views/registro.html">Crear Cuenta</a></li>
-                <li class="header_nav_li"><a href="../views/galeria.html">Galeria</a></li>
-                <li class="header_nav_li"><a href="../views/login.html">Login</a></li>
-                <li class="header_nav_li"><a href="../views/contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+        <header>
+        
+            <label class="menu"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></label>
+            <h1 class="header_title" ><a href="../../">P U B L I C O B R A S</a></h1>
+            <nav>
+                <ul class="header_nav ocultar">
+                    <li class="header_title_nav_li"><a href="../../">P U B L I C O B R A S</a></li>
+                    <li class="header_nav_li"><a href="../views/acerca.html">Acerca de PublicObras</a></li>
+                    <li class="header_nav_li"><a href="../views/registro.html">Crear Cuenta</a></li>
+                    <li class="header_nav_li"><a href="../views/galeria.html">Galeria</a></li>
+                    <li class="header_nav_li"><a href="../views/login.html">Login</a></li>
+                    <li class="header_nav_li"><a href="../views/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
 
 <main>
         
@@ -35,12 +40,12 @@
         <h2>Registrate</h2>
         <br>
         <form id="registroForm" action="/registro" method="post">
-            <label>Nombre De Usuario : <input required  maxlength="15" type="text" name="user" placeholder="Coloque su Usuario" ></label>
-            <label>Nombre : <input required maxlength="10" type="text" name="nombre" placeholder="Colocar su Nombre"></label>
-            <label>Apellido/s : <input required  maxlength="20" type="text" name="apellido" placeholder="Colocar su Apellido/s"></label>
-            <label>Mail : <input required   type="text" name="mail" placeholder="Colocar su mail/s"></label>
-            <label>Contraseña : <input type="password" name="pass" placeholder="Escriba su contraseña"></label>
-            <label for="genero">Genero : 
+            <label class="label">Usuario : <input required  maxlength="15" type="text" name="user" placeholder="Coloque su Usuario" ></label>
+            <label class="label">Nombre : <input required maxlength="10" type="text" name="nombre" placeholder="Colocar su Nombre"></label>
+            <label class="label">Apellido/s : <input required  maxlength="20" type="text" name="apellido" placeholder="Colocar su Apellido/s"></label>
+            <label class="label">Mail : <input required   type="text" name="mail" placeholder="Colocar su mail/s"></label>
+            <label class="label">Contraseña : <input type="password" name="pass" placeholder="Escriba su contraseña"></label>
+            <label class="label" for="genero">Genero : 
                 <select id="genero" name="genero">                    
                     <option value="Femenino">Femenino</option>
                     <option value="Masculino">Masculino</option>
@@ -48,10 +53,10 @@
                 </select>
             </label>
             
-                <label>Fecha de Nacimiento :<input type="date"  name="fecha_nacimiento" ></label>
+                <label class="label">Fecha de Nacimiento :<input type="date"  name="fecha_nacimiento" ></label>
             
             <label><input type="checkbox" name="do" >He leido y acepto los terminos
-                y condicionesde uso</label>
+                y condiciones de uso</label>
 
             <input class="boton" type="submit" value="Enviar Formulario">
         

@@ -1,11 +1,11 @@
-const menu = document.querySelector(".menu");
+// const menu = document.querySelector(".menu");
 const form = document.querySelector(".formulario");
 const boton = document.querySelector("button");
 
-function onOff(){
-    const nav = document.querySelector(".header_nav");
-    nav.classList.toggle("ocultar")
-}
+// function onOff(){
+//     const nav = document.querySelector(".header_nav");
+//     nav.classList.toggle("ocultar")
+// }
 
 function validacion(){
     const nombre = document.querySelector(".main1 input");
@@ -27,7 +27,7 @@ function validacion(){
     return true;
 }
 
-menu.addEventListener("click", onOff);
+// menu.addEventListener("click", onOff);
 form.addEventListener("submit",(e) => {
 
     e.preventDefault();

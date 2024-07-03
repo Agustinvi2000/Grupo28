@@ -194,7 +194,7 @@ body{
         }
         main {
             .main_title {
-                padding-top: 16px;
+                padding-top: 50px;
             }
             .formulario {
                 .main1, .main2, .main7, .main8,.main9 {
@@ -214,8 +214,4 @@ body{
 
 nav{
     background-color: beige;
-}
-
-h1{
-    color: purple
 }

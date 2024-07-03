@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="./css/components/header.css">
     <link rel="stylesheet" href="./css/components/footer.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/components/menu.css">
+
     <script defer src="./js/index.js"></script>
+    <script defer src="./js/menu.js"></script>
     <script defer src="./js/suscribirse.js"></script>
     <link rel="icon" href="./img/favicon.ico">
 
@@ -15,23 +18,25 @@
 </head>
 <body>
     <header>
-        <h1 class="header_title"><a href="./">P U B L I C O B R A S</a></h1>
+        
+        <label class="menu"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></label>
+        <h1 class="header_title" ><a href="../../">P U B L I C O B R A S</a></h1>
         <nav>
-            <ul class="header_nav">
-                <li class="header_nav_li"><a href="./views/acerca.html">Acerca de PublicObras</a></li>
-                <li class="header_nav_li"><a href="./views/registro.html">Crear Cuenta</a></li>
-                <li class="header_nav_li"><a href="./views/galeria.html">Galeria</a></li>
-                <li class="header_nav_li"><a href="./views/login.html">Login</a></li>
-                <li class="header_nav_li"><a href="./views/contacto.html">Contacto</a></li>
+            <ul class="header_nav ocultar">
+                <li class="header_title_nav_li"><a href="../../">P U B L I C O B R A S</a></li>
+                <li class="header_nav_li"><a href="../views/acerca.html">Acerca de PublicObras</a></li>
+                <li class="header_nav_li"><a href="../views/registro.html">Crear Cuenta</a></li>
+                <li class="header_nav_li"><a href="../views/galeria.html">Galeria</a></li>
+                <li class="header_nav_li"><a href="../views/login.html">Login</a></li>
+                <li class="header_nav_li"><a href="../views/contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    <div>
-        <h2 id="mensajeBienvenida"></h2>
-        <a id="linkDeEdicion" href="./views/editar.html"></a>
-    </div>
-
     <main>
+        <div class="bienvenida">
+            <h2 id="mensajeBienvenida"></h2>
+            <a id="linkDeEdicion" href="./views/editar.html"></a>
+        </div>
         <p>Les presentamos nuestra Galería de Arte</p>
         <p>Van a poder Comprar, Vender, Subastar y Mostrar sus obras de forma gratuita.</p>
         <h2>Nuestras Obras en exposición</h2>
@@ -53,12 +58,11 @@
                 <p>No está a la Venta</p>
             </div>
         </div>
+        <section class="iframeSection">
+            <iframe src="https://www.youtube.com/embed/BNXtO1snd7I?si=HohbAvti0ir4kaZ4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h3 class="iframeTexto">Querés exponer tus obras y no sabes cómo?<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#A96424"><path d="M480-418q-67.33 0-122.17 37.83Q303-342.33 277.33-280h405.34q-25-63-80.17-100.5T480-418Zm-178-68 48-44 44 44 34.67-38-44-44 44-44.67-34.67-38-44 44-48-44-34.67 38 44 44.67-44 44L302-486Zm264.67 0L610-530l48.67 44 34.66-38-44-44 44-44.67-34.66-38-48.67 44-43.33-44-34.67 38L575.33-568 532-524l34.67 38ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 333.33q139.33 0 236.33-97t97-236.33q0-139.33-97-236.33t-236.33-97q-139.33 0-236.33 97t-97 236.33q0 139.33 97 236.33t236.33 97Z"/></svg>, en este video <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M440-240v-368L296-464l-56-56 240-240 240 240-56 56-144-144v368h-80Z"/></svg> te mostramos todo lo que tenés que saber para hacerlo.</h3>
+        </section> 
     </main>
-
-    <section class="iframeSection">
-        <iframe src="https://www.youtube.com/embed/BNXtO1snd7I?si=HohbAvti0ir4kaZ4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <h3>Querés exponer tus obras y no sabes cómo?<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#A96424"><path d="M480-418q-67.33 0-122.17 37.83Q303-342.33 277.33-280h405.34q-25-63-80.17-100.5T480-418Zm-178-68 48-44 44 44 34.67-38-44-44 44-44.67-34.67-38-44 44-48-44-34.67 38 44 44.67-44 44L302-486Zm264.67 0L610-530l48.67 44 34.66-38-44-44 44-44.67-34.66-38-48.67 44-43.33-44-34.67 38L575.33-568 532-524l34.67 38ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 333.33q139.33 0 236.33-97t97-236.33q0-139.33-97-236.33t-236.33-97q-139.33 0-236.33 97t-97 236.33q0 139.33 97 236.33t236.33 97Z"/></svg>, en este video <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M440-240v-368L296-464l-56-56 240-240 240 240-56 56-144-144v368h-80Z"/></svg> te mostramos todo lo que tenés que saber para hacerlo.</h3>
-    </section> 
 
     <footer>
         <label for="newsletter">Recibe las últimas novedades de PublicObras:
