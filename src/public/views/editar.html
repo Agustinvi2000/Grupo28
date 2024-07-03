@@ -25,25 +25,25 @@
             </ul>
         </nav>
     </header>
-
+    <h2>Panel de Control</h2>
     <main class="editarMain">
-        <label for="userId">Coloque id para deshabilitar usuario:
-            <input type="number" class="editarInput", id="userId" name="userId" placeholder="nro de id">
+        <label class="itemEditar" for="userId"><h3>Deshabilitar usuario:</h3>
+            <input type="number" class="editarInput", id="userId" name="userId" placeholder="id de Usuario">
             <button type="button" class="editarButton" id="botonDeshabilitar">Enviar</button>
         </label>
 
-        <label for="publicacionId">Coloque id para eliminar publicación:
-            <input type="text" class="editarInput", id="publicacionId" name="publicacionId" placeholder="nro de id">
+        <label class="itemEditar" for="publicacionId"><h3>Eliminar publicación:</h3>
+            <input type="text" class="editarInput", id="publicacionId" name="publicacionId" placeholder="id de publicación">
             <button type="button" class="editarButton" id="botonEliminar">Enviar</button>
         </label>
         
-        <form id="publicarForm" action="/publicar" method="POST" enctype="multipart/form-data">
-            <label for="userId">Coloque id del usuario que publica:
-                <input type="number" class="editarInput", id="userIdPublicar" name="userIdPublicar" placeholder="nro de id">
+        <form id="publicarForm" class="itemEditar" action="/publicar" method="POST" enctype="multipart/form-data">
+            <label class="itemForm" for="userId"><h3>Publicación de Obra:</h3>
+                <input type="number" class="editarInput", id="userIdPublicar" name="userIdPublicar" placeholder="id de Usuario">
             </label>
-            <label>Archivo :<input type="file"  name="archivo" ></label>
-            <label>Autor :<input type="text"  name="autor" ></label>
-            <label>Descripción :<textarea name="descripcion" ></textarea></label>
+            <label class="itemForm">Archivo :<input type="file" class="editarInput" name="archivo"></label>
+            <label class="itemForm">Autor :<input type="text" class="editarInput" name="autor" placeholder="Nombre del Autor de la Obra"></label>
+            <label class="itemForm">Descripción :<textarea name="descripcion" class="editarInput" placeholder="Breve descripción de la obra"></textarea></label>
             <input type="submit"  class="editarButton" value="Subir publicación">
         </form>
 

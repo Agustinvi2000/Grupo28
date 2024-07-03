@@ -126,3 +126,30 @@ nav {
 .next {
     right: 10px;
 }
+
+.comentar, .carousel-comentario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    textarea{
+        width: 234px;
+        background-color: rgb(209, 159, 192);
+        color: white;
+        font-weight: bolder;
+        
+    }
+}
+
+.comentarButton{
+    margin-top: 0.5em;
+    height: 1.5rem;
+    background-color: rgb(104, 225, 104);
+    color: white;
+    font-weight: bolder;
+}
+
+h5 {
+    text-align: center;
+    color: rgb(85, 26, 85);
+}

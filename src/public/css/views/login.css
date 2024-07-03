@@ -30,11 +30,18 @@
 }
 
 .loginButton {
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
     height: 1.5rem;
-    color: black;
-    font-weight: bolder; 
+    background-color: rgb(104, 225, 104);
+    color: white;
+    font-weight: bolder;
 }
 nav{
     background-color: beige;
+}
+
+input {
+    background-color: rgb(209, 159, 192);
+    color: white;
+    font-weight: bolder;
 }

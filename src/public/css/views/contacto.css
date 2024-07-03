@@ -36,6 +36,16 @@ body{
             text-align: center;
             margin-bottom: 3rem;
         }
+        input {
+            background-color: rgb(209, 159, 192);
+            color: white;
+            font-weight: bolder;
+        }
+        .titulo {
+            color: rgb(117, 19, 208);
+            font-weight: bolder;
+            font-style: italic; 
+        }
         .formulario {
             display: contents;
             .main1{
@@ -48,7 +58,7 @@ body{
             }
             .main3{
                 grid-area: main3;
-                justify-self: right;
+                justify-self: center;
             }
             .main4{
                 grid-area: main4;
@@ -79,6 +89,10 @@ body{
             .main10{
                 grid-area: main10;
                 justify-self: center;
+                height: 1.5rem;
+                background-color: rgb(104, 225, 104);
+                color: white;
+                font-weight: bolder;
             }
         } 
         label {
@@ -187,9 +201,6 @@ body{
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
-                }
-                .main3{
-                    justify-self: center;
                 }
                 .main4, .main5, .main6 {
                     input {

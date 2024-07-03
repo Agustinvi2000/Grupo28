@@ -24,10 +24,11 @@ carouselComentar += `
                     <p>${image.descripcion}</p>
                     <p>Id Usuario: ${image.userId}</p>
                     <br>
-                    <h5>Comente la foto:</h5>
-                    <textarea name="comentario-${image.id}"></textarea>
-                    <button type="button" class="comentarButton" data-image-id="${image.id}" data-user-id="${image.userId}">Enviar</button>
-                    
+                    <div class="comentar">
+                        <h5>Comente la foto:</h5>
+                        <textarea name="comentario-${image.id}"></textarea>
+                        <button type="button" class="comentarButton" data-image-id="${image.id}" data-user-id="${image.userId}">Enviar</button>
+                    </div>
                 </div>`;
 
                 // Renderizar los comentarios
@@ -108,6 +109,8 @@ document.querySelectorAll('.comentarButton').forEach(button => {
             const response = await resultado.json();
             document.querySelector(`textarea[name="comentario-${imagenId}"]`).value = '';
             alert(response.message);
+            window.location.href = '/views/galeria.html';
+
         } catch (error) {
             console.error('Error al agregar comentario:', error);
         }
