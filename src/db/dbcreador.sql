@@ -22,12 +22,12 @@ CREATE TABLE galeria (
     autor VARCHAR(255) NOT NULL,
     descripcion VARCHAR(255) NOT NULL,
     userId INT(11),
-    FOREIGN KEY (userId) REFERENCES users(id)
+    FOREIGN KEY (userId) REFERENCES users(id) ON DELETE CASCADE
 );
 
 CREATE TABLE comentarios (
     id INT(11) AUTO_INCREMENT PRIMARY KEY,
     comentario TEXT NOT NULL,
     publicacionId INT(11),
-    FOREIGN KEY (publicacionId) REFERENCES galeria(id)
+    FOREIGN KEY (publicacionId) REFERENCES galeria(id) ON DELETE CASCADE
 );

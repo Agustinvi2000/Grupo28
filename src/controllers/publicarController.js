@@ -15,7 +15,7 @@ const publicarController = async (req, res) => {
         );        
 
         res.setHeader("Content-Type", "application/json")
-        res.status(201).redirect("/")
+        res.status(201).json({data: result, message: "Se ha publicado exitosamente!"});        
     } catch (error) {
         res.setHeader("Content-Type", "application/json")
         return res.status(500).json("Error inesperado en el servidor al publicar")

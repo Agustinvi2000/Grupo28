@@ -8,28 +8,10 @@ import { deleteController } from "./controllers/deleteController.js"
 import { suscribirseController } from "./controllers/suscribirseController.js"
 import { galeriaController } from "./controllers/galeriaController.js"
 import { comentariosController } from './controllers/comentariosController.js';
-
-// MULTER
-// import path from "path";
+import { getUsersAndGaleriaController } from './controllers/getUsersAndGaleriaController.js';
+import { authorizationController } from './controllers/authorizationController.js';
+import { multerController } from "./controllers/multerController.js"
 import { publicarController } from "./controllers/publicarController.js"
-import multer from "multer"
-
-// const __dirname = path.resolve();
-const storage = multer.diskStorage({
-    // destination: (req, file, cb) => {
-    //     cb(null, path.join(__dirname, '/public/uploads/'));
-    // },
-    destination: './src/public/uploads/',
-    filename: (req, file, cb) => {
-        cb(null, Date.now() + "_" + file.originalname)
-    }
-})
-
-const uploadFile = multer({storage})
-
-// MULTER
-
-
 
 const PORT = 8080
 
@@ -46,30 +28,25 @@ const connectDB = async () => {
 };
 connectDB();
 
-
-
 app.use(express.json()) //para que nuestro servidor convierta automaticamente json a objetos js y manipularlos directamente del req.body 
 app.use(express.urlencoded({extended: true}))//para que el req.body pueda contener cualquier tipo de datos
 
-
 app.use(express.static("./src/public"))//Para servir contenido estatico de mi carpeta public
 // app.use(express.static("../src/public")) //me ejecuta bien solo si pongo ..
-
 
 app.use(cookieParser("codoAcodo"))//Para el manejo sencillo de cookies al usar jwt
 
 //RUTAS
 app.post("/registro", registroController)
 app.post("/login", loginController)
-app.put("/edit/:id", editController)
-app.delete("/delete/:id", deleteController)
+app.put("/edit/:id", authorizationController, editController)
+app.delete("/delete/:id", authorizationController, deleteController)
 app.post("/suscribirse", suscribirseController)
 
-app.post("/publicar", uploadFile.single('archivo'), publicarController)
-
+app.post("/publicar", authorizationController, multerController , publicarController)
 app.get("/galeria", galeriaController);
-
 app.post('/comentarios', comentariosController);
+app.get('/get-users-and-galeria', getUsersAndGaleriaController);
 
 //RUTAS
 

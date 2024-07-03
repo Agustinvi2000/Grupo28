@@ -20,9 +20,11 @@ document.querySelector('body').onload = async () => {
             </div>`;
 carouselComentar += `                
                 <div class="carousel-comentar ${isActive ? '' : 'd-none'}">
+                    ${decodedToken?.rol == "admin" ? `<button type="button" class="eliminarButton" data-image-id="${image.id}">Eliminar</button><br>` : ''}
                     <h5>Autor: ${image.autor}</h5>
                     <p>${image.descripcion}</p>
-                    <p>Id Usuario: ${image.userId}</p>
+                    <p>Id Publicación: ${image.id}</p>
+                    <p>Usuario: ${image.user}</p>
                     <br>
                     <div class="comentar">
                         <h5>Comente la foto:</h5>
@@ -113,6 +115,31 @@ document.querySelectorAll('.comentarButton').forEach(button => {
 
         } catch (error) {
             console.error('Error al agregar comentario:', error);
+        }
+    });
+});
+
+// Enviar la solicitud DELETE con el token en el header Authorization
+document.querySelectorAll('.eliminarButton').forEach(button => {
+    button.addEventListener('click', async (e) => {
+        e.preventDefault();
+        const imagenId = e.target.getAttribute('data-image-id');
+
+        try {
+            const resultado = await fetch(`/delete/${imagenId}`, {
+                method: "DELETE",
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            let response = await resultado.json();
+            alert(response.message);
+            window.location.reload();
+
+        } catch (error) {
+            console.log("Error al querer eliminar publicación");
         }
     });
 });

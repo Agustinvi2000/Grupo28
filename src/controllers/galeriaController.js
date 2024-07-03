@@ -3,7 +3,7 @@ import { pool } from "../db/dbconnect.js";
 const galeriaController = async (req, res) => {
     try {
 
-        const [imagenes] = await pool.query('SELECT * FROM galeria');
+        const [imagenes] = await pool.query('SELECT g.*, u.user, u.mail FROM galeria g JOIN users u ON g.userId = u.id');
         const [comentarios] = await pool.query('SELECT * FROM comentarios');
 
         const data = imagenes.map(imagen => {

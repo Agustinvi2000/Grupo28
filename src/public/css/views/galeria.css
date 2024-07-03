@@ -141,10 +141,18 @@ nav {
     }
 }
 
-.comentarButton{
+.comentarButton {
     margin-top: 0.5em;
     height: 1.5rem;
     background-color: rgb(104, 225, 104);
+    color: white;
+    font-weight: bolder;
+}
+
+.eliminarButton {
+    margin-top: 0.5em;
+    height: 1.5rem;
+    background-color: rgb(225, 104, 104);
     color: white;
     font-weight: bolder;
 }
