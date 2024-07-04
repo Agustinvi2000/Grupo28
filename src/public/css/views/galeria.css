@@ -17,6 +17,10 @@ a {
     color: revert;
 }
 
+.header_title{
+    margin-block-start: 0.67em;
+    margin-bottom: 0.5rem;
+}
 
 body {
     margin: inherit;
