@@ -15,10 +15,9 @@ const authorizationController = (req, res, next) => {
         const decodedToken = jwt.verify(token, '1234'); // Verificar token JWT
 
         if (decodedToken.rol !== 'admin') {
-            return res.status(403).json({ message: 'Acceso denegado. No tienes permisos para publicar obras.' });
+            return res.status(403).json({ message: 'Acceso denegado. No tienes permisos como administrador' });
         }
 
-        // Si el token es válido y el usuario es admin, permitir la carga de archivo
         next();
     } catch (error) {
         console.error('Error al verificar token:', error);

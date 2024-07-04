@@ -207,7 +207,6 @@ document.getElementById('publicarForm').addEventListener('submit', async (e) => 
     const form = document.getElementById('publicarForm');
     const formData = new FormData(form);
 
-    // console.log(token)
     try {
         const response = await fetch('/publicar', {
             method: 'POST',
@@ -217,16 +216,11 @@ document.getElementById('publicarForm').addEventListener('submit', async (e) => 
             }
         });
 
-        if (!response.ok) {
-            throw new Error('Error al enviar formulario');
-        }
-
         const data = await response.json();
-        alert(data.message); // Mostrar mensaje de éxito o error
+        alert(data.message);
         window.location.reload();
 
     } catch (error) {
         console.error('Error al enviar formulario:', error);
-        // Manejar el error, mostrar mensaje al usuario, etc.
     }
 });
