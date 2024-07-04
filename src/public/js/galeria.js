@@ -22,7 +22,7 @@ carouselComentar += `
                 <div class="carousel-comentar ${isActive ? '' : 'd-none'}">
                     <div class="button-container">
                         ${decodedToken?.rol == "admin" ? `<a type="button" class="btn btn-warning botones" href="../views/editar.html?publicacionId=${image.id}">Modificar Información</a>` : ''}
-                        ${decodedToken?.rol == "admin" ? `<button type="button" class="btn btn-danger botones" data-image-id="${image.id}">Eliminar</button><br>` : ''} 
+                        ${decodedToken?.rol == "admin" ? `<button type="button" id="eliminarButton" class="btn btn-danger botones" data-image-id="${image.id}">Eliminar</button><br>` : ''} 
                     </div>
 
                     <h5>Autor: ${image.autor}</h5>
@@ -124,7 +124,7 @@ document.querySelectorAll('.comentarButton').forEach(button => {
 });
 
 // Enviar la solicitud DELETE con el token en el header Authorization
-document.querySelectorAll('.eliminarButton').forEach(button => {
+document.getElementById('eliminarButton').forEach(button => {
     button.addEventListener('click', async (e) => {
         e.preventDefault();
         const imagenId = e.target.getAttribute('data-image-id');
