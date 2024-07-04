@@ -149,12 +149,16 @@ nav {
     font-weight: bolder;
 }
 
-.eliminarButton {
+.botones {
     margin-top: 0.5em;
-    height: 1.5rem;
-    background-color: rgb(225, 104, 104);
-    color: white;
     font-weight: bolder;
+}
+
+.button-container {
+    display: flex;
+    gap: 0px 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 h5 {

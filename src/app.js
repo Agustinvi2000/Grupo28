@@ -3,6 +3,7 @@ import cookieParser from "cookie-parser"
 import { pool } from "./db/dbconnect.js"
 import { registroController } from "./controllers/registroController.js"
 import { loginController } from "./controllers/loginController.js"
+import { rolUsuarioController } from "./controllers/rolUsuarioController.js"
 import { editController } from "./controllers/editController.js"
 import { deleteController } from "./controllers/deleteController.js"
 import { suscribirseController } from "./controllers/suscribirseController.js"
@@ -12,6 +13,7 @@ import { getUsersAndGaleriaController } from './controllers/getUsersAndGaleriaCo
 import { authorizationController } from './controllers/authorizationController.js';
 import { multerController } from "./controllers/multerController.js"
 import { publicarController } from "./controllers/publicarController.js"
+
 
 const PORT = 8080
 
@@ -39,7 +41,7 @@ app.use(cookieParser("codoAcodo"))//Para el manejo sencillo de cookies al usar j
 //RUTAS
 app.post("/registro", registroController)
 app.post("/login", loginController)
-app.put("/edit/:id", authorizationController, editController)
+app.put("/modificar-rol-usuario/:id", authorizationController, rolUsuarioController)
 app.delete("/delete/:id", authorizationController, deleteController)
 app.post("/suscribirse", suscribirseController)
 
@@ -47,6 +49,8 @@ app.post("/publicar", authorizationController, multerController , publicarContro
 app.get("/galeria", galeriaController);
 app.post('/comentarios', comentariosController);
 app.get('/get-users-and-galeria', getUsersAndGaleriaController);
+app.put("/edit/:id", authorizationController, editController)
+
 
 //RUTAS
 

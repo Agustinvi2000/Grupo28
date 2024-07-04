@@ -20,7 +20,11 @@ document.querySelector('body').onload = async () => {
             </div>`;
 carouselComentar += `                
                 <div class="carousel-comentar ${isActive ? '' : 'd-none'}">
-                    ${decodedToken?.rol == "admin" ? `<button type="button" class="eliminarButton" data-image-id="${image.id}">Eliminar</button><br>` : ''}
+                    <div class="button-container">
+                        ${decodedToken?.rol == "admin" ? `<a type="button" class="btn btn-warning botones" href="../views/editar.html?publicacionId=${image.id}">Modificar Información</a>` : ''}
+                        ${decodedToken?.rol == "admin" ? `<button type="button" class="btn btn-danger botones" data-image-id="${image.id}">Eliminar</button><br>` : ''} 
+                    </div>
+
                     <h5>Autor: ${image.autor}</h5>
                     <p>${image.descripcion}</p>
                     <p>Id Publicación: ${image.id}</p>

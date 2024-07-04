@@ -1,16 +1,21 @@
+const botonModificar = document.getElementById('botonModificar')
+
 document.addEventListener('DOMContentLoaded', async () => {
     try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const publicacionIdaModificar = urlParams.get('publicacionId');
+
         const response = await fetch('/get-users-and-galeria');
         const data = await response.json();
         const usersSelect = document.getElementById('userId');
+        const usersSelectHabilitar = document.getElementById('userIdHabilitar');
         const usersSelectPublicar = document.getElementById('userIdPublicar');
         const galeriaSelect = document.getElementById('publicacionId');
+        const galeriaSelectModificar = document.getElementById('publicacionIdModificar');
+        const usersSelectPublicarModificar = document.getElementById('userIdPublicarModificar');
 
-        // Llenar el select de usuarios
-
-        data.users.sort((a, b) => a.id - b.id);
-
-        data.users.forEach(user => {
+        data.usersHabilitado.sort((a, b) => a.id - b.id);
+        data.usersHabilitado.forEach(user => {
             const option = document.createElement('option');
             option.value = user.id;
             option.textContent = user.user;
@@ -20,16 +25,50 @@ document.addEventListener('DOMContentLoaded', async () => {
             optionPublicar.value = user.id;
             optionPublicar.textContent = user.user;
             usersSelectPublicar.appendChild(optionPublicar);
+
+            const optionPublicarModificar = document.createElement('option');
+            optionPublicarModificar.value = user.id;
+            optionPublicarModificar.textContent = user.user;
+            usersSelectPublicarModificar.appendChild(optionPublicarModificar);
+        });
+
+        data.usersDeshabilitado.sort((a, b) => a.id - b.id);
+        data.usersDeshabilitado.forEach(user => {
+            const option = document.createElement('option');
+            option.value = user.id;
+            option.textContent = user.user;
+            usersSelectHabilitar.appendChild(option);
         });
 
         data.galeria.sort((a, b) => a.id - b.id);
-        // Llenar el select de IDs de galería
         data.galeria.forEach(item => {
             const option = document.createElement('option');
             option.value = item.id;
             option.textContent = item.id;
             galeriaSelect.appendChild(option);
+
+            const optionModificar = document.createElement('option');
+            optionModificar.value = item.id;
+            optionModificar.textContent = item.id;
+            galeriaSelectModificar.appendChild(optionModificar);
         });
+
+        if (publicacionIdaModificar) {
+            galeriaSelectModificar.value = publicacionIdaModificar;
+            const formularioModificar = document.getElementById('formularioModificar');
+            formularioModificar.classList.add('highlight');
+
+            botonModificar.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            setTimeout(() => {
+                formularioModificar.classList.remove('highlight');
+                formularioModificar.classList.add('remove-highlight');
+            }, 3000);
+                    
+            setTimeout(() => {
+                formularioModificar.classList.remove('remove-highlight');
+            }, 4000);
+            }
     } catch (error) {
         console.error('Error al obtener los datos:', error);
     }
@@ -42,15 +81,16 @@ const botonDeshabilitar = document.getElementById('botonDeshabilitar')
 botonDeshabilitar.addEventListener("click", async (e) => {
     e.preventDefault()
     let userId = document.getElementById("userId").value
-    // console.log(userId)
+
     try {
         // const resultado = await fetch(`/edit/${userId}`, {method: "PUT"})
         
-        const resultado = await fetch(`/edit/${userId}`, {
+        const resultado = await fetch(`/modificar-rol-usuario/${userId}`, {
             method: "PUT",
+            body: JSON.stringify({newRol: 'deshabilitado'}),
             headers: {
-                'Authorization': `Bearer ${token}`,
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
             }
         });
 
@@ -59,7 +99,73 @@ botonDeshabilitar.addEventListener("click", async (e) => {
         window.location.reload();
 
     } catch (error) {
-        console.log("Error al querer dehabilitar usuario")        
+        console.log("Error al querer deshabilitar usuario")        
+    }
+})
+
+
+const botonHabilitar = document.getElementById('botonHabilitar')
+
+botonHabilitar.addEventListener("click", async (e) => {
+    e.preventDefault()
+    let userIdHabilitar = document.getElementById("userIdHabilitar").value
+
+    // console.log(userId)
+    try {
+        // const resultado = await fetch(`/edit/${userId}`, {method: "PUT"})
+        
+        const resultado = await fetch(`/modificar-rol-usuario/${userIdHabilitar}`, {
+            method: "PUT",
+            body: JSON.stringify({newRol: 'usuario'}),
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            }
+        });
+
+        let response = await resultado.json()
+        alert(response.message)
+        window.location.reload();
+
+    } catch (error) {
+        console.log("Error al querer habilitar usuario")        
+    }
+})
+
+
+
+
+botonModificar.addEventListener("click", async (e) => {
+    e.preventDefault()
+    let publicacionIdModificar = document.getElementById("publicacionIdModificar").value
+    let userIdPublicarModificar = document.getElementById("userIdPublicarModificar").value
+    let autorModificar = document.getElementById("autorModificar").value
+    let descripcionModificar = document.getElementById("descripcionModificar").value
+
+    // console.log(userId)
+    try {
+        // const resultado = await fetch(`/edit/${userId}`, {method: "PUT"})
+        
+        const resultado = await fetch(`/edit/${publicacionIdModificar}`, {
+            method: "PUT",
+            body: JSON.stringify({
+                userIdPublicar: userIdPublicarModificar,
+                autor: autorModificar,
+                descripcion: descripcionModificar
+            }),
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            }
+        });
+
+        let response = await resultado.json()
+        alert(response.message)
+        window.location.reload();
+
+    } catch (error) {
+        console.log("Error al querer modificar publicación")   
+        if(publicacionIdModificar === '') {alert("Debe seleccionar un id de una publicación")}     
     }
 })
 
@@ -88,7 +194,8 @@ botonEliminar.addEventListener("click", async (e) => {
         window.location.reload();
 
     } catch (error) {
-        console.log("Error al querer eliminar publicación")        
+        console.log("Error al querer eliminar publicación")
+        if(publicacionId === '') {alert("Debe seleccionar un id de una publicación")}     
     }
 })
 

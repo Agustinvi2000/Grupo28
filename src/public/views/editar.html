@@ -37,13 +37,20 @@
     <main>
         <h1>Panel de Control</h1>
         <div class="editarMain">
-                <label class="itemEditar" for="userId"><h2>Deshabilitar usuario:</h2>
+                <div class="itemEditar">
+                    <h2>Deshabilitar usuario:</h2>
                     <select class="editarInput" id="userId" name="userId">
                         <option value="">Seleccione un usuario</option>
                     </select>
+                    <button type="button" class="editarButton" id="botonDeshabilitar">Deshabilitar</button>
 
-                <button type="button" class="editarButton" id="botonDeshabilitar">Enviar</button>
-            </label>
+                    <h2>Habilitar usuario:</h2>
+                    <select class="editarInput" id="userIdHabilitar" name="userIdHabilitar">
+                        <option value="">Seleccione un usuario</option>
+                    </select>
+                    <button type="button" class="editarButton" id="botonHabilitar">Habilitar</button>
+
+                </div>
 
             <label class="itemEditar" for="publicacionId"><h2>Eliminar publicación:</h2>
                 <select class="editarInput" id="publicacionId" name="publicacionId">
@@ -52,14 +59,30 @@
                 
                 <button type="button" class="editarButton" id="botonEliminar">Enviar</button>
             </label>
+
+            
+            <label class="itemEditar" id="formularioModificar"><h2 >Modificar publicación:</h2>
+                <select class="editarInput" id="publicacionIdModificar" name="publicacionIdModificar">
+                    <option value="">Seleccione un ID de publicación</option>
+                </select><br>
+                <select class="editarInput" id="userIdPublicarModificar" name="userIdPublicarModificar">
+                    <option value="">Seleccione un usuario</option>
+                    <option value="1">usuario1</option>
+                </select>
+                <label class="itemForm">Autor :<input type="text" class="editarInput" id="autorModificar" name="autorModificar" placeholder="Nombre del Autor de la Obra"></label>
+                <label class="itemForm">Descripción :<textarea id="descripcionModificar" name="descripcionModificar" class="editarInput" placeholder="Breve descripción de la obra"></textarea></label>
+
+                <button type="button" class="editarButton" id="botonModificar">Enviar</button>
+            </label>
             
             <form id="publicarForm" class="itemEditar" action="/publicar" method="POST" enctype="multipart/form-data">
                 <label class="itemForm" for="userIdPublicar"><h2>Publicación de Obra:</h2>
-                    <select class="editarInput" id="userIdPublicar" name="userIdPublicar">
+                    <select class="editarInput" id="userIdPublicar" name="userIdPublicar" required>
                         <option value="">Seleccione un usuario</option>
+                        <option value="1">usuario1</option>
                     </select>
                 </label>
-                <label class="itemForm">Archivo :<input type="file" class="editarInput" name="archivo"></label>
+                <label class="itemForm">Archivo :<input type="file" class="editarInput" name="archivo" required></label>
                 <label class="itemForm">Autor :<input type="text" class="editarInput" name="autor" placeholder="Nombre del Autor de la Obra"></label>
                 <label class="itemForm">Descripción :<textarea name="descripcion" class="editarInput" placeholder="Breve descripción de la obra"></textarea></label>
                 <input type="submit"  class="editarButton" value="Subir publicación">
